@@ -1,38 +1,133 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f19066;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Prompt", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.text {
+  margin: 2rem 0;
   text-align: center;
+  color: black;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-control {
   display: flex;
   flex-direction: column;
+  height: 80vh;
+  justify-content: flex-start;
   align-items: center;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
+  padding: 1.5rem;
+  position: relative;
+  background-color: #f3a683;
+  border: none;
+}
+.form {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  background-color: #f3a683;
+  padding: 1.5rem;
+}
+.input-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0 2rem;
+  gap: 0.5rem;
+}
+.btn-hover {
+  width: 50%;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 5px;
+  /* moz-transition: all .4s ease-in-out; */
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding: 0 1rem;
+  height: 50px;
+}
+.btn-hover:hover {
+  background-position: 100% 0;
+  /* moz-transition: all .4s ease-in-out; */
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.btn-hover.btn-color {
+  background-color: #e07d52;
+  box-shadow: 0 4px 15px 0 rgba(240, 221, 188, 0.628);
 }
 
-.App-link {
-  color: #61dafb;
+.input-task {
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 1rem;
+  outline: none;
+  height: 50px;
+  border: none;
+  background-color: #e07d52;
+  color: black;
+  box-shadow: #e4b86d95 0px 2px 6px 0px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checked {
+  text-decoration: line-through;
+  color: red;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  margin: 1rem 0rem;
+  width: 100%;
+  padding-left: 5px;
+  color: black;
+  cursor: pointer;
+}
+li p {
+  width: 85%;
+}
+.task-icons {
+  display: flex;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.6rem;
+  transition: all 0.4s ease-in-out;
+}
+.task-icons:hover {
+  transform: scale(0.95);
+  transition: all 0.4s ease-in-out;
+  opacity: 0.7;
 }
